@@ -1,3 +1,4 @@
+````markdown
 # Task Tracker CLI
 
 A lightweight command-line task management tool built in Python.
@@ -38,7 +39,7 @@ cd task-tracker-cli
 All commands are run using:
 
 ```bash
-python tasks.py  [arguments]
+python tasks.py <command> [arguments]
 ```
 
 A `tasks.json` file will be automatically created in the same directory when you add your first task.
@@ -54,22 +55,22 @@ python tasks.py add "Your task description"
 
 ### Update a task
 ```bash
-python tasks.py update  "New description"
+python tasks.py update <id> "New description"
 ```
 
 ### Delete a task
 ```bash
-python tasks.py delete 
+python tasks.py delete <id>
 ```
 
 ### Mark as in progress
 ```bash
-python tasks.py mark-in-progress 
+python tasks.py mark-in-progress <id>
 ```
 
 ### Mark as done
 ```bash
-python tasks.py mark-done 
+python tasks.py mark-done <id>
 ```
 
 ### List all tasks
@@ -118,10 +119,13 @@ ID    Status          Description              Created
 ---
 
 ## Project Structure
+
+```
 task-tracker-cli/
 ├── tasks.py        # Main application logic
 ├── .gitignore      # Excludes local data from version control
 └── README.md       # Project documentation
+```
 
 ---
 
@@ -130,3 +134,4 @@ task-tracker-cli/
 - Invalid task IDs are handled gracefully
 - Data is persisted automatically after each change
 - No external dependencies required
+````
