@@ -1,4 +1,3 @@
-````markdown
 # Task Tracker CLI
 
 A lightweight command-line task management tool built in Python.
@@ -134,4 +133,3 @@ task-tracker-cli/
 - Invalid task IDs are handled gracefully
 - Data is persisted automatically after each change
 - No external dependencies required
-````
