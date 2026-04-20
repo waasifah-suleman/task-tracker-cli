@@ -1,12 +1,14 @@
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import String, DateTime
+from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy.sql import func
 from database import Base
 
 class Task(Base):
-    __tablename__ = "tasks" # creating table in database called task
+    """ Represents the tasks table in the database"""
+    __tablename__ = "tasks"
 
-    id = Column(Integer, primary_key=True, index=True)
-    description = Column(String, nullable=False)
-    status = Column(String, default="todo")
-    created_at = Column(DateTime, server_default=func.now())
-    updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
+    id: Mapped[int] = mapped_column(primary_key=True, index=True)
+    description: Mapped[str] = mapped_column(String, nullable=False)
+    status: Mapped[str] = mapped_column(String, default="todo")
+    created_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
+    updated_at: Mapped[DateTime] = mapped_column(DateTime, server_default=func.now())
