@@ -22,7 +22,7 @@ function TaskList() {
             <AddTaskForm onTaskAdded={fetchTasks} />
 
             {tasks.map(task => (
-                <TaskCard key={task.id} task={task} onDelete={fetchTasks} />
+                <TaskCard key={task.id} task={task} onDelete={fetchTasks} onUpdate={fetchTasks} />
             ))}
         </div>
     )
