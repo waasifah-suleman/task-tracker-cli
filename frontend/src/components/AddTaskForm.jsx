@@ -25,6 +25,7 @@ function AddTaskForm({ onTaskAdded }) {
         placeholder="Added a new task..."
         value={description}
         onChange={(e) => setDescription(e.target.value)}
+        onKeyDown={e => e.key === "Enter" && handleSubmit()}
       />
 
       <button onClick={handleSubmit}>Add Task</button>
