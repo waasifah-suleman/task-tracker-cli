@@ -19,8 +19,9 @@ function AddTaskForm({ onTaskAdded }) {
   }
 
   return (
-    <div>
+    <div className="flex gap-2 mb-6">
       <input
+        className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         type="text"
         placeholder="Added a new task..."
         value={description}
@@ -28,7 +29,9 @@ function AddTaskForm({ onTaskAdded }) {
         onKeyDown={e => e.key === "Enter" && handleSubmit()}
       />
 
-      <button onClick={handleSubmit}>Add Task</button>
+      <button 
+        className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition"
+        onClick={handleSubmit}>Add Task</button>
     </div>
   )
 }

@@ -2,10 +2,11 @@ import TaskList from "./components/TaskList"
 
 function App() {
   return (
-    <div>
-      <h1>Task Tracker</h1>
-
-      <TaskList />
+    <div className="min-h-screen bg-gray-100">
+      <div className="max-w-2xl mx-auto py-10 px-4">
+        <h1 className="text-3xl font-bold text-black mb-8">Task Tracker</h1>
+        <TaskList />
+      </div>
     </div>
   )
 }
