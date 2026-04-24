@@ -21,7 +21,7 @@ function AddTaskForm({ onTaskAdded }) {
   return (
     <div className="flex gap-2 mb-6">
       <input
-        className="flex-1 border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+        className="flex-1 bg-gray-800 border border-gray-700 text-gray-100 placeholder:gray-500 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
         type="text"
         placeholder="Added a new task..."
         value={description}

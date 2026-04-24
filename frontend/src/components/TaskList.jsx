@@ -31,7 +31,7 @@ function TaskList() {
 
   return (
     <div>
-      <h2 className="text-xl font-bold text-gray-800 mb-4">My Tasks</h2>
+      <h2 className="text-lg font-semi-bold text-gray-200 mb-4">My Tasks</h2>
 
       <AddTaskForm onTaskAdded={fetchTasks} />
 
